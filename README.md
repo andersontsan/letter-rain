@@ -16,20 +16,20 @@ There are two versions with the same behaviour:
 
 | File | For |
 | --- | --- |
-| [`LetterDrop.tsx`](LetterDrop.tsx) | Framer (code component) |
-| [`letter-drop.js`](letter-drop.js) | Any website, no framework or build step |
+| [`LetterRain.tsx`](LetterRain.tsx) | Framer (code component) |
+| [`letter-rain.js`](letter-rain.js) | Any website, no framework or build step |
 
 ## Framer
 
-1. In your project, open **Assets → Code → + → New Code File**, name it `LetterDrop`, and paste in [`LetterDrop.tsx`](LetterDrop.tsx).
-2. Drag **LetterDrop** into your hero section.
+1. In your project, open **Assets → Code → + → New Code File**, name it `LetterRain`, and paste in [`LetterRain.tsx`](LetterRain.tsx).
+2. Drag **LetterRain** into your hero section.
 3. Set it to **Position: Absolute** with top, right, bottom and left at **0**, and move it to the bottom of the hero's layers so your content stays on top.
 4. Give the hero a height (for example 100vh) and **Overflow: Hidden**.
 5. Adjust it from the right panel, then use **Preview** to try typing. Typing is off on the editor canvas, which shows "Hello" falling instead.
 
 ## Any website
 
-Copy [`letter-drop.js`](letter-drop.js) next to your page, then:
+Copy [`letter-rain.js`](letter-rain.js) next to your page, then:
 
 ```html
 <section class="hero">
@@ -43,9 +43,9 @@ Copy [`letter-drop.js`](letter-drop.js) next to your page, then:
 </style>
 
 <script type="module">
-  import { createLetterDrop } from "./letter-drop.js"
+  import { createLetterRain } from "./letter-rain.js"
 
-  const drop = createLetterDrop(document.querySelector(".hero"), {
+  const rain = createLetterRain(document.querySelector(".hero"), {
     color: "#081F5C",
     rain: 3,
   })
@@ -54,7 +54,7 @@ Copy [`letter-drop.js`](letter-drop.js) next to your page, then:
 
 It fills whatever element you pass in. Serve the page from a web server (or GitHub Pages): browsers block JavaScript modules on pages opened straight from disk.
 
-`createLetterDrop` returns:
+`createLetterRain` returns:
 
 - `clear()` blows every letter away, like pressing **Clear**
 - `setRain(n)` sets the rain to `n` smileys per second
@@ -64,7 +64,7 @@ It fills whatever element you pass in. Serve the page from a web server (or GitH
 
 ## Options
 
-The same settings exist as Framer properties and as `createLetterDrop` options.
+The same settings exist as Framer properties and as `createLetterRain` options.
 
 | Option | Default | What it does |
 | --- | --- | --- |
@@ -88,4 +88,4 @@ The same settings exist as Framer properties and as `createLetterDrop` options.
 
 Physics by [matter-js](https://github.com/liabru/matter-js) (MIT), loaded from [esm.sh](https://esm.sh).
 
-Made by [Anderson Tsan](https://anderson-tsan.framer.website/) with [Claude](https://claude.ai).
+Made by [Anderson Tsan](https://anderson-tsan.framer.website/).

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Letter Drop</title>
+<title>Letter Rain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
@@ -40,16 +40,16 @@
 <body>
   <section class="hero">
     <div class="hero-content">
-      <h1>Letter Drop</h1>
+      <h1>Letter Rain</h1>
       <p>Type anything. Letters fall from the clouds and pile up.</p>
       <a class="btn" href="https://github.com/andersontsan/letter-rain">View on GitHub</a>
     </div>
   </section>
 
   <script type="module">
-    import { createLetterDrop } from "./letter-drop.js"
+    import { createLetterRain } from "./letter-rain.js"
 
-    createLetterDrop(document.querySelector(".hero"), {
+    createLetterRain(document.querySelector(".hero"), {
       fontFamily: "Inter, system-ui, sans-serif",
       cloudTop: 40,
     })
