@@ -88,4 +88,4 @@ The same settings exist as Framer properties and as `createLetterDrop` options.
 
 Physics by [matter-js](https://github.com/liabru/matter-js) (MIT), loaded from [esm.sh](https://esm.sh).
 
-Made by [Anderson Tsan](https://anderson-tsan.framer.website/).
+Made by [Anderson Tsan](https://anderson-tsan.framer.website/) with [Claude](https://claude.ai).
