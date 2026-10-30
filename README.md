@@ -1,4 +1,4 @@
-# Letter Drop
+# Letter Rain
 
 A playful hero background. Visitors type and the letters fall and pile up at the bottom of the screen. Smileys `:)` drizzle from drifting ASCII clouds, a slider controls the rain, and **Clear** blows everything away with a gust of wind.
 
