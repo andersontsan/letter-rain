@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Letter Drop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f7f7f7; font-family: Inter, system-ui, sans-serif; color: #171717; }
+
+  /* Any element can host the effect; it fills the element's box */
+  .hero {
+    height: 100vh;
+    min-height: 560px;
+    background-image: radial-gradient(#d9d9d9 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+  }
+
+  /* Keep your own content above the falling letters */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+    pointer-events: none;
+  }
+  .hero-content a { pointer-events: auto; }
+  h1 { margin: 0; font-size: clamp(32px, 5vw, 40px); font-weight: 600; letter-spacing: -0.02em; }
+  p { margin: 12px 0 24px; color: #444; }
+  .btn { background: #171717; color: #fff; border-radius: 999px; padding: 11px 19px; font-weight: 600; font-size: 14px; text-decoration: none; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Letter Drop</h1>
+      <p>Type anything. Letters fall from the clouds and pile up.</p>
+      <a class="btn" href="https://github.com/andersontsan/letter-rain">View on GitHub</a>
+    </div>
+  </section>
+
+  <script type="module">
+    import { createLetterDrop } from "./letter-drop.js"
+
+    createLetterDrop(document.querySelector(".hero"), {
+      fontFamily: "Inter, system-ui, sans-serif",
+      cloudTop: 40,
+    })
+  </script>
+</body>
+</html>
